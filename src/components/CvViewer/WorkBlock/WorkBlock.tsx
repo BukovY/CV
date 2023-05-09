@@ -24,17 +24,18 @@ export const WorkBlock = ({
   return (
     <div className={css.wrapper}>
       <div className={css.heading}>
-        <h3>{companyName}</h3>
+        <h3 className={css.title}>{companyName}</h3>
         {getDateFromTimeStampInDay(startDate)} -{" "}
         {isCurrentWork ? "now" : getDateFromTimeStampInDay(endDate)}
       </div>
-      {position && <h4>position</h4>}
+      {position && <p><b>{position}</b></p>}
       {adress && <p>{adress}</p>}
       {description && (
         <TextWithHeading
           heading="Description"
           text={description}
           isSmallHeading
+          isHrShow={false}
         />
       )}
     </div>

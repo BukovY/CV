@@ -6,6 +6,7 @@ import insttagrammIcon from "./Icons/instagram.png";
 import youtubeIcon from "./Icons/youtube.png";
 import websiteIcon from "./Icons/website.png";
 import { SocialItem } from "./SocialItem/SocialItem";
+import css from './Social.module.css';
 
 type SocialProps = {
   github?: string;
@@ -29,6 +30,7 @@ export const Social = ({
   return (
     <div>
       <h3>Social</h3>
+      <div className={css.iconsWrapper}>
       <SocialItem link={github} icon={githubIcon} />
       <SocialItem link={linkedin} icon={linkedinIcon} />
       <SocialItem link={facebook} icon={facebookIcon} />
@@ -36,6 +38,7 @@ export const Social = ({
       <SocialItem link={instagram} icon={insttagrammIcon} />
       <SocialItem link={youtube} icon={youtubeIcon} />
       <SocialItem link={website} icon={websiteIcon} />
+      </div>
     </div>
   );
 };
