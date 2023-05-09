@@ -1,5 +1,5 @@
 export type ResumeViewerType = {
-  template: "basic" | "modern"; // ...
+  template?: "basic" | "modern"; // ...
   personalInfo: {
     fullName: string;
     // or surname and name
@@ -12,13 +12,13 @@ export type ResumeViewerType = {
     salaryExpectation?: string;
     isShowAvatar?: boolean;
     social: {
-      github: string;
-      linkedin: string;
-      facebook: string;
-      twitter: string;
-      instagram: string;
-      youtube: string;
-      website: string;
+      github?: string;
+      linkedin?: string;
+      facebook?: string;
+      twitter?: string;
+      instagram?: string;
+      youtube?: string;
+      website?: string;
     };
     description: string; // richText? or just string
   };
@@ -42,7 +42,6 @@ export type ResumeViewerType = {
   skills: {
     name: string;
     level: number; // 1-5m or in percent from 0 to 100
-    icon: string; // url
   }[];
   hobbies: {
     name: string;
