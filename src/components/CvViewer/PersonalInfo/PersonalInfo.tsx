@@ -2,11 +2,11 @@ import { getDateFromTimeStampInDay } from "../formatters/date.formatters";
 import css from "./PersonalInfo.module.css";
 
 type PersonalInfoProps = {
-  birthDate: number;
-  email: string;
-  phone: string;
-  address: string;
-  englishLevel: string;
+  birthDate?: number;
+  email?: string;
+  phone?: string;
+  address?: string;
+  englishLevel?: string;
   salaryExpectation?: string;
 };
 export const PersonalInfo = ({

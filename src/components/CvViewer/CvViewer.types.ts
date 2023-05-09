@@ -1,17 +1,17 @@
 export type ResumeViewerType = {
   template?: "basic" | "modern"; // ...
   personalInfo: {
-    fullName: string;
+    fullName?: string;
     // or surname and name
-    birthDate: number; // timestamp
-    email: string;
-    phone: string;
-    address: string;
-    avatar: string;
-    englishLevel: string; // A1, A2, B1, B2, C1, C2
+    birthDate?: number; // timestamp
+    email?: string;
+    phone?: string;
+    address?: string;
+    avatar?: string;
+    englishLevel?: string; // A1, A2, B1, B2, C1, C2
     salaryExpectation?: string;
     isShowAvatar?: boolean;
-    social: {
+    social?: {
       github?: string;
       linkedin?: string;
       facebook?: string;
@@ -20,9 +20,9 @@ export type ResumeViewerType = {
       youtube?: string;
       website?: string;
     };
-    description: string; // richText? or just string
+    description?: string; // richText? or just string
   };
-  workExperience: {
+  workExperience?: {
     companyName: string;
     position: string; // job title
     adress: string;
@@ -31,7 +31,7 @@ export type ResumeViewerType = {
     isCurrentWork: boolean;
     description: string; // richText? or just string
   }[];
-  education: {
+  education?: {
     universityName: string;
     speciality: string;
     startDate: number; // timestamp
@@ -39,15 +39,15 @@ export type ResumeViewerType = {
     isCurrentEducation: boolean;
     description: string; // richText? or just string
   }[];
-  skills: {
+  skills?: {
     name: string;
     level: number; // 1-5m or in percent from 0 to 100
   }[];
-  hobbies: {
+  hobbies?: {
     name: string;
     icon: string; // url
   }[];
-  additionalBlocks: {
+  additionalBlocks?: {
     title: string;
     description: string; // richText? or just string
   }[];

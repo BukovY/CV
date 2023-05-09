@@ -1,8 +1,10 @@
 import "./App.css";
 import { CvViewer } from "./components/CvViewer/CvViewer";
-import { CvData } from "./components/CvViewer/CvViewer.stub";
+import { EditForm } from "./components/EditForm/EditForm";
+import { useCvContext } from "./context/CvContext";
 
 function App() {
+  const { cvData } = useCvContext();
   return (
     <div
       className="App"
@@ -14,10 +16,10 @@ function App() {
       }}
     >
       <div style={{ border: "1px solid red", width: "100%", height: "100%" }}>
-        edit vindow
+        <EditForm />
       </div>
       <div style={{ border: "1px solid red", width: "100%", height: "100%" }}>
-        <CvViewer cv={CvData} />
+        <CvViewer cv={cvData} />
       </div>
     </div>
   );

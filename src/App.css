@@ -49,7 +49,7 @@ hr {
 
 hr:after {
   background: #fff;
-  content: '§';
+  content: "§";
   padding: 0 4px;
   position: relative;
   top: -13px;

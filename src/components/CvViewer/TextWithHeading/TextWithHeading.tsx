@@ -11,13 +11,17 @@ export const TextWithHeading = ({
   heading,
   text,
   isSmallHeading,
-  isHrShow = true
+  isHrShow = true,
 }: TextWithHeadingProps) => {
   return (
     <div className={css.wrapper}>
-      {heading && !isSmallHeading && <h3  className={css.disableMargin}>{heading}</h3>}
-      {heading && isSmallHeading && <h5 className={css.disableMargin}>{heading}</h5>}
-      {isHrShow && (<hr />)}
+      {heading && !isSmallHeading && (
+        <h3 className={css.disableMargin}>{heading}</h3>
+      )}
+      {heading && isSmallHeading && (
+        <h5 className={css.disableMargin}>{heading}</h5>
+      )}
+      {isHrShow && <hr />}
       {text && <p>{text}</p>}
     </div>
   );

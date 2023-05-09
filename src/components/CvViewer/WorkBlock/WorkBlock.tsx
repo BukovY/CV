@@ -28,7 +28,11 @@ export const WorkBlock = ({
         {getDateFromTimeStampInDay(startDate)} -{" "}
         {isCurrentWork ? "now" : getDateFromTimeStampInDay(endDate)}
       </div>
-      {position && <p><b>{position}</b></p>}
+      {position && (
+        <p>
+          <b>{position}</b>
+        </p>
+      )}
       {adress && <p>{adress}</p>}
       {description && (
         <TextWithHeading

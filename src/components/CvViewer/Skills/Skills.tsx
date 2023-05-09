@@ -1,5 +1,5 @@
 import { StarRaring } from "./StarRating/StarRating";
-import css from './Skills.module.css';
+import css from "./Skills.module.css";
 type SkillsProps = {
   items: {
     name: string;
@@ -11,7 +11,8 @@ export const Skills = ({ items }: SkillsProps) => {
     <div>
       {items.map((el) => (
         <div className={css.ItemWrapper}>
-          <h5 className={css.title}>{el.name}</h5> <StarRaring value={el.level} />
+          <h5 className={css.title}>{el.name}</h5>{" "}
+          <StarRaring value={el.level} />
         </div>
       ))}
     </div>

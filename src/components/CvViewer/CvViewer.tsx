@@ -29,11 +29,11 @@ export const CvViewer = ({ cv }: CvViewerProps) => {
           text={personalInfo.description}
         />
         <TextWithHeading heading="Work experience" />
-        {workExperience.map((el) => (
+        {(workExperience || []).map((el) => (
           <WorkBlock {...el} />
         ))}
         <TextWithHeading heading="Education" />
-        {education.map((el) => (
+        {(education || []).map((el) => (
           <WorkBlock
             companyName={el.universityName}
             position={el.speciality}
@@ -42,10 +42,10 @@ export const CvViewer = ({ cv }: CvViewerProps) => {
           />
         ))}
         <TextWithHeading heading="Skills" />
-        <Skills items={skills} />
+        <Skills items={skills || []} />
         <TextWithHeading heading="Hobbies" />
-        <Hobbies items={hobbies} />
-        {additionalBlocks.map((el) => (
+        <Hobbies items={hobbies || []} />
+        {(additionalBlocks || []).map((el) => (
           <TextWithHeading heading={el.title} text={el.description} />
         ))}
       </div>
