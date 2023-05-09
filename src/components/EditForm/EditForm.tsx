@@ -111,7 +111,7 @@ export const EditForm = () => {
                     onChange={workExperienceHandle}
                   />
                 </Item>
-                <Item label="Adress" name={[name, "startDate"]}>
+                <Item label="Start date" name={[name, "startDate"]}>
                   <DatePicker
                     style={{ width: "100%" }}
                     picker="date"
@@ -125,7 +125,7 @@ export const EditForm = () => {
                     onChange={workExperienceHandle}
                   />
                 </Item>
-                <Item label="Adress" name={[name, "endDate"]}>
+                <Item label="End date" name={[name, "endDate"]}>
                   <DatePicker
                     style={{ width: "100%" }}
                     picker="date"
@@ -146,7 +146,7 @@ export const EditForm = () => {
                     onChange={workExperienceHandle}
                   />
                 </Item>
-                <Item label="Description" name={[name, "isCurrentWork"]}>
+                <Item label="Is current work" name={[name, "isCurrentWork"]}>
                   <Switch
                     key={key}
                     defaultChecked={
