@@ -1,5 +1,11 @@
+export enum Template {
+  Basic = 'basic',
+  BasicReverse = "basic reverse",
+  Modern = "modern"
+}
+
 export type ResumeViewerType = {
-  template?: "basic" | "modern"; // ...
+  template?: Template; // ...
   personalInfo: {
     fullName?: string;
     // or surname and name

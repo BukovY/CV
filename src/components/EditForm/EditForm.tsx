@@ -11,7 +11,7 @@ import {
   Space,
 } from "antd";
 import dayjs from "dayjs";
-import { ResumeViewerType } from "../CvViewer/CvViewer.types";
+import { ResumeViewerType, Template } from "../CvViewer/CvViewer.types";
 import { text } from "stream/consumers";
 import { useCvContext } from "../../context/CvContext";
 import { MinusCircleOutlined, PlusOutlined } from "@ant-design/icons";
@@ -62,9 +62,10 @@ export const EditForm = () => {
     >
       <Item label="Theme">
         <Select
-          mode="multiple"
           placeholder="Choose theme"
-          options={["modern", "basic"].map((el) => ({ text: el, value: el }))}
+          options={[Template.Basic, Template.BasicReverse, Template.Modern].map((el) => ({ text: el, value: el }))}
+          onChange={(value) => setCvData({...cvData, template: value})}
+          value={cvData.template}
         />
       </Item>
 
